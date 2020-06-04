@@ -1,0 +1,10 @@
+{%extends 'design.html'%}
+{%block content%}
+	<h1>What's coming up</h1>
+	<ul class="list-group">
+		{%for cinema in films%}
+			<li class="list-group-item"><a href="cinema/{{cinema.id}}">{{cinema.title}}</a></li>
+		{%endfor%}
+	</ul>
+
+{%endblock %}

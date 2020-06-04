@@ -1,0 +1,25 @@
+{% extends "design.html" %}
+
+
+
+{% block content %}
+{% for film in films %}
+<div class="card mb-3" style="max-width: 500px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{ x }}" class="card-img" alt="{{ film[0] }}">
+    </div>
+        <h5 class="card-title"><a href="{{ url_for('film_info', film_name = film[0])}}">{{ film[0] }}</a></h5>
+        <p class="card-text">{{ film[5] }}</p>
+        <p class="card-text">{{ film[1] }} | {{ film[2]}} | {{ film[4] }}</p>
+        <p class="card-text">Режиссеры: {{ film[3] }}</p>
+        </br>
+        <hr>
+        <p class="card-text">Кинотеатр: <small>{{ film[6] }}</small></p>
+        <p class="card-text">Сеансы: {{ film[4] }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

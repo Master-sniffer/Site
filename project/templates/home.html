@@ -1,0 +1,13 @@
+{%extends 'design.html'%}
+{%block content%}
+	<div class="jumbotron text-center">
+		<h1>Welcome , boii!</h1>
+		<p class="lead"> This aplication aint that good or bad</p>
+		{% if session.logged_in==NULL%}
+			<a href="/register" class="btn btn-primary btn-lg">Register</a>
+			<a href="login" class="btn btn-success btn-lg">Login</a>
+		{% endif%}
+	</div>
+
+
+{%endblock %}
